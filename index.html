@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  const friendName = "Dev"; // 👈 yahan dost ka naam change karo
+</script>
+
+</head>
+<body>
+  <div class="balloons">
+  <span>🎈</span><span>🎈</span><span>🎈</span>
+  <span>🎈</span><span>🎈</span><span>🎈</span>
+</div>
+
+
+
+<audio id="bgMusic" autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="page active" id="page1">
+  <h1>🎉 Surprise Time 🎉</h1>
+  <h1>🎂 Happy Birthday <span id="Dev"></span> 🎂</h1>
+
+  <p>Ek special message tumhare liye 💖</p>
+  <button onclick="nextPage()">Ye Dabaye 👉</button>
+</div>
+
+<div class="page" id="page2">
+  
+  <h1>🎂 Happy Birthday <span id="typingName"></span> 🎂</h1>
+
+  <h1>🎂 Happy Birthday Dost 🎂</h1>
+  <p>Tu meri life ka sabse solid dost hai 💙</p>
+  <div class="photos">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img class="slideshow" id="slide" src="img1.jpg">
+  
+
+  
+  </div>
+
+  <button onclick="nextPage()">Next 🎁</button>
+  <button onclick="previousPage()">Pichhe dekhe 💫</button>
+</div>
+
+<div class="page" id="page3">
+  <h1>🎂 Happy Birthday <span id="Dev"></span> 🎂</h1>
+  <h1>🥳 Special Wishes for you 🥳</h1>
+  <p>
+    Har din khushiyon se bhara ho,<br>
+    Tera future bright ho 🌟
+  </p>
+  <div class="photos">
+    <img src="img4.jpg">
+    <img src="img5.jpg">
+  </div>
+  <button onclick="nextPage()">Aur Dekho 💫</button>
+  <button onclick="previousPage()">Pichhe dekhe 💫</button>
+</div>
+
+<div class="page" id="page4">
+  <h1>🎂 Happy Birthday <span id="Dev"></span> 🎂</h1>
+  <h1>💖 Yaadein 💖</h1>
+  <p>Hamari dosti hamesha aisi hi rahe 🤝</p>
+  <div class="photos">
+    <img src="img6.jpg">
+    <img src="img7.jpg">
+  </div>
+  <button onclick="nextPage()">Last Page 🎉</button>
+   <button onclick="previousPage()">Pichhe dekhe 💫</button>
+</div>
+
+<div class="page" id="page5">
+  <h1>🎂 Happy Birthday <span id="Dev"></span> 🎂</h1>
+  <h1>🎊 Once Again 🎊</h1>
+  <h2>Happy Birthday Mere Bhai 🎂</h2>
+  <p>Enjoy your special day 🥰</p>
+  <canvas id="fireworks"></canvas>
+  
+
+  <div class="photos">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+    <img src="img5.jpg">
+    <img src="img6.jpg">
+  </div>
+  <button onclick="share()">Share on WhatsApp 💚</button>
+  <button onclick="previousPage()">Pichhe dekhe 💫</button>
+
+
+</div>
+
+<div class="page" id="page6">
+  <div class="reel">
+    <video src="reel.mp4" autoplay loop muted></video>
+    <div class="reelText">
+      <h2>Happy Birthday ❤️</h2>
+      <p>@best_dost_forever</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

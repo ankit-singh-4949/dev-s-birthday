@@ -1,0 +1,151 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: linear-gradient(45deg,#ff4e50,#f9d423,#24c6dc,#514a9d);
+  background-size: 400% 400%;
+  animation: bgMove 10s infinite alternate;
+  height:100vh;
+  overflow:hidden;
+}
+
+@keyframes bgMove{
+  0%{background-position:0%}
+  100%{background-position:100%}
+}
+
+.page{
+  display:none;
+  height:100vh;
+  color:white;
+  text-align:center;
+  padding:40px;
+}
+
+.page.active{
+  display:block;
+  animation: fade 1.5s;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:scale(0.9)}
+  to{opacity:1; transform:scale(1)}
+}
+
+h1{
+  font-size:45px;
+  margin-bottom:15px;
+}
+
+p{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+button{
+  padding:12px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  background:#fff;
+  color:#333;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4);
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  background:#ffd700;
+}
+
+.photos{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+
+.photos img{
+  width:150px;
+  height:180px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 0 15px rgba(255,255,255,0.6);
+  animation: float 3s infinite alternate;
+}
+
+@keyframes float{
+  from{transform:translateY(0)}
+  to{transform:translateY(-15px)}
+}
+
+.balloons span{
+  position:absolute;
+  bottom:-100px;
+  font-size:40px;
+  animation: fly 8s linear infinite;
+}
+
+.balloons span:nth-child(1){left:5%}
+.balloons span:nth-child(2){left:20%; animation-delay:2s}
+.balloons span:nth-child(3){left:35%; animation-delay:4s}
+.balloons span:nth-child(4){left:50%; animation-delay:1s}
+.balloons span:nth-child(5){left:70%; animation-delay:3s}
+.balloons span:nth-child(6){left:90%; animation-delay:5s}
+
+@keyframes fly{
+  from{transform:translateY(0)}
+  to{transform:translateY(-120vh)}
+}
+
+
+#fireworks{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+@media(max-width:600px){
+  h1{font-size:30px}
+  p{font-size:16px}
+  .photos img{
+    width:100px;
+    height:120px;
+  }
+  button{
+    font-size:16px;
+    padding:10px 20px;
+  }
+}
+
+.slideshow img{
+  width:220px;
+  height:280px;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(255,255,255,0.7);
+}
+
+.reel{
+  width:100%;
+  height:100vh;
+  position:relative;
+}
+.reel video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.reelText{
+  position:absolute;
+  bottom:60px;
+  left:20px;
+  color:white;
+}
