@@ -99,3 +99,11 @@ setInterval(()=>{
 },2500);
 
 
+const finalLink = "https://USERNAME.github.io/birthday/";
+
+document.getElementById("qrCode").src =
+  "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
+  encodeURIComponent(finalLink);
+
+
+
